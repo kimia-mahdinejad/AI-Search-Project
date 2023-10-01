@@ -1,6 +1,6 @@
-red, red, blue, red, red, 6
-blue, blue, blue, red ,blue, 6
-green, green, yellow, green, green, 6
-yellow, yellow, yellow, green ,yellow, 6
-yellow,green, blue, red, 6
-6
+[[0 , 1 , 1 , 0 , 0 , 0],
+ [0 , 0 , 2 , 0 , 0 , 3],
+ [-1, -1, 2 , 0 , 0 , 3],
+ [4 , 0 , 0 , 0 , 5 , 5],
+ [4 , 0 , 0 , 0 , 6 , 0],
+ [7 , 7 , 0 , 0 , 6 , 0]]

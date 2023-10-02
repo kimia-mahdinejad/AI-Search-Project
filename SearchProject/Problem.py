@@ -48,6 +48,11 @@ class Problem:
     def successor(self, state: State) -> list:
         child = []
 
+        if Problem.check_left(state.board.red_block, state.board):
+            Action.left(state.board.red_block, state.board)
+            child.append(State(copy.deepcopy(state.board), state, state.g_n + 1))
+            Action.right(state.board.red_block, state.board)
+
         for i in state.board.blocks:
             if Problem.check_up(i, state.board):
                 Action.up(i, state.board)
@@ -68,11 +73,6 @@ class Problem:
                 Action.right(i, state.board)
                 child.append(State(copy.deepcopy(state.board), state, state.g_n + 1))
                 Action.left(i, state.board)
-
-        if Problem.check_left(state.board.red_block, state.board):
-            Action.left(state.board.red_block, state.board)
-            child.append(State(copy.deepcopy(state.board), state, state.g_n + 1))
-            Action.right(state.board.red_block, state.board)
 
         if Problem.check_right(state.board.red_block, state.board):
             Action.right(state.board.red_block, state.board)

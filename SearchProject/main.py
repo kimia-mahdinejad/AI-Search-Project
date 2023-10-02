@@ -5,7 +5,7 @@ from Search import Search
 import ast
 
 if __name__ == '__main__':
-    test_path = 'tests/test2.txt'
+    test_path = './SearchProject/tests/test2.txt'
     file = open(test_path, 'r')
     p = ''
     for i in file.readlines():
